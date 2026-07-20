@@ -1,1 +1,14 @@
+CREATE TABLE Department(
+Dept_ID INT PRIMARY KEY,
+Dept_Name VARCHAR(50)
+);
 
+CREATE TABLE Employee(
+Emp_ID INT PRIMARY KEY,
+Emp_Name VARCHAR(100),
+Age INT,
+Gender VARCHAR(10),
+Salary DECIMAL(10,2),
+Dept_ID INT,
+FOREIGN KEY (Dept_ID) REFERENCES Department(Dept_ID)
+);
